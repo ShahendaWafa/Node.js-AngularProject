@@ -8,6 +8,7 @@ import { GlobalService } from 'src/app/services/global.service';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
+
 export class RegisterComponent implements OnInit {
   msg = ""
   registerForm = new FormGroup({

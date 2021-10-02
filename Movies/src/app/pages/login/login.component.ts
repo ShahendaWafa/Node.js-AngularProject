@@ -10,7 +10,7 @@ import { GlobalService } from 'src/app/services/global.service';
 })
 export class LoginComponent implements OnInit {
 
-    loginForm = new FormGroup({
+  loginForm = new FormGroup({
     email: new FormControl(),
     password: new FormControl()
   })
