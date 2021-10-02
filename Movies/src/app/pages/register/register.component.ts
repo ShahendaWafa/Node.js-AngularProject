@@ -39,23 +39,23 @@ export class RegisterComponent implements OnInit {
   }
 
   register(){
+    this.msg = ""
     if(this.registerForm.valid){
       this._user.register(this.registerForm.value).subscribe(
         data=>{ 
           console.log(data)
          },
         (e)=>{
-          if(e.error.includes('email')) this.msg= "Invalid email format"
-          else if(e.error.includes('name')) this.msg= "Invalid name format"
-          else if(e.error.includes('password')) this.msg= "Invalid password format"
-          },
+          this.msg = e.error.data
+        },
         ()=>{
           this.msg = "Successfully registered" 
           this.registerForm.reset()
           this._router.navigateByUrl('/login')
         }
-        )
+      )
     }
-
+    else if(this.registerForm.value.name == "")
+      this.msg = "Full name is required"
   }
 }

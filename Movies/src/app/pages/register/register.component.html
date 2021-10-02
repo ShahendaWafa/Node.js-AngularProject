@@ -6,15 +6,33 @@
     <div class="form-group">
       <label for="exampleInputName">Full Name</label>
       <input type="name" class="form-control" formControlName="name"  placeholder="Enter full name">
+      <!-- <div *ngIf="name?.invalid" class="alert alert-danger">
+        <p *ngIf="name?.errors?.required"> name is required</p>
+        <p *ngIf="name?.errors?.minLength"> name minmum length is 3</p>
+        <p *ngIf="name?.errors?.max Length"> name maximum length is 20</p>
+    </div> -->
     </div>
     <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
       <input type="email" class="form-control" formControlName="email" aria-describedby="emailHelp" placeholder="Enter email">
       <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      
+      <!-- <div *ngIf="email?.invalid" class="alert alert-danger">
+        <p *ngIf="email?.errors?.required"> email is required</p>
+        <p *ngIf="email?.errors?.email"> email invalid format</p>
+      </div> -->
+
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Password</label>
       <input type="password" class="form-control" formControlName="password" placeholder="Enter password">
+
+      <!-- <div *ngIf="password?.invalid" class="alert alert-danger">
+        <p *ngIf="password?.errors?.required"> password is required</p>
+        <p *ngIf="password?.errors?.minLength"> password minmum length is 3</p>
+        <p *ngIf="password?.errors?.max Length"> password maximum length is 20</p>
+      </div> -->
+
     </div>
     <div class="form-group">
       <label>Phone Number</label>
@@ -27,6 +45,10 @@
 
     <button type="submit" class="btn btn-primary">Register</button>
   </form>
+
+  <div class="alert alert-primary" *ngIf='msg!=""'>
+    {{this.msg}}
+  </div>
 </div>
 
 
