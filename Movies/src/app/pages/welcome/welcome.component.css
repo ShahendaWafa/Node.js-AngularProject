@@ -1,0 +1,14 @@
+body, html {
+    background-image: url('/assets/img.jpg');
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: center center; 
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+::ng-deep body, ::ng-deep html {
+  height:100%;
+  margin: 0;
+}
