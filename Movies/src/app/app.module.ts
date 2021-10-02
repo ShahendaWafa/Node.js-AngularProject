@@ -10,7 +10,6 @@ import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { HomeComponent } from './pages/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserInterceptor } from './providers/user.interceptor';
-import { SearchBarComponent } from './search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +18,6 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
     RegisterComponent,
     WelcomeComponent,
     HomeComponent,
-    SearchBarComponent
   ],
   imports: [
     BrowserModule,
