@@ -10,6 +10,7 @@ import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { HomeComponent } from './pages/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserInterceptor } from './providers/user.interceptor';
+import { GaugeModule } from 'angular-gauge';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { UserInterceptor } from './providers/user.interceptor';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    GaugeModule.forRoot(),
   ],
   providers: [
     {
